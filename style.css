@@ -1,0 +1,95 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* End of reset */
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(/Norse-Bold.otf) format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* Sidebar styles */
+
+.sidebar {
+  width: 35%;
+  height: auto;
+  background-image: url(unsplash.jpg);
+  position: relative;
+}
+
+.odin-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 22%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 175px;
+}
+
+.odin-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 80%;
+}
+
+img {
+  height: 100%;
+}
+
+.odin-logo p {
+  font-family: 'Norse Bold';
+  font-size: 100px;
+  color: white;
+}
+
+.img-credit {
+  width: 40%;
+  position: absolute;
+  bottom: 20px;
+  left: 170px;
+  color: white;
+}
