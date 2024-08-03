@@ -42,9 +42,20 @@ p, h1, h2, h3, h4, h5, h6 {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(/Roboto-Regular.ttf) format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html {
+  height: 100%;
+}
+
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   display: flex;
 }
 
@@ -52,8 +63,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
   width: 35%;
-  height: auto;
+  min-height: 100%;
   background-image: url(unsplash.jpg);
+  background-size: cover;
   position: relative;
 }
 
@@ -62,10 +74,10 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 22%;
+  height: 15%;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
-  top: 175px;
+  top: 250px;
 }
 
 .odin-logo {
@@ -78,6 +90,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 img {
   height: 100%;
+  
 }
 
 .odin-logo p {
@@ -87,9 +100,127 @@ img {
 }
 
 .img-credit {
-  width: 40%;
+  width: 50%;
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 170px;
   color: white;
+}
+
+.credit-span {
+  text-decoration: underline;
+}
+
+
+.main {
+  width: 65%;
+  background-color: #f9fafc;
+}
+
+.preface {
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: bold;
+  color: #010101;
+  line-height: 1.0;
+
+  width: 70%;
+  margin-left: 50px;
+  margin-top: 180px;
+}
+
+.preface p + p {
+  margin-top: 20px;
+}
+
+/* Form styles */
+
+.form-start {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding-top: 20px;
+}
+
+.form {
+  margin-top: 50px;
+  padding-bottom: 30px;
+  width: 100%;
+
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  color: #010101;
+
+  background-color: white;
+}
+
+.form-row {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.form-cell {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+input {
+  border: 2px solid #E5E7EB;
+  border-radius: 5px;
+  width: 250px;
+  padding: 5px;
+}
+
+input[type='password']:invalid {
+  border-color: rgb(211, 23, 23);
+}
+
+input[type='password']:invalid + span::before {
+  content: '* Passwords do not match';
+  color: rgb(211, 23, 23);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(34, 34, 201);
+  box-shadow: 0 1px 1px rgb(34, 34, 201);
+}
+
+.account {
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color: #596D48;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.account:focus {
+  outline: none;
+  border-color: #596D48;
+  box-shadow: 0 1px 1px #596D48;
+}
+
+.account-text {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+
+  color: #010101;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+a:link, a:visited {
+  color: #596D48;
+  text-decoration: none;
 }
